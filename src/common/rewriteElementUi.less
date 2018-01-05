@@ -1,0 +1,78 @@
+
+// 全局覆盖element-ui的样式
+@baseFontSize: 14px;
+@blueColorBase: #52cef8;
+@hoverBlueColorBase: #00b1f5;
+
+html, body {
+  font-size: @baseFontSize;
+}
+
+// 侧边栏样式复写
+.sidebar {
+  .lc-menu-container {
+    .el-icon-arrow-down {
+      margin-top: -6px;
+    }
+    .el-submenu {
+      .is-active {
+        color: @blueColorBase;
+        & > .point {
+          visibility: visible;
+          background: @blueColorBase
+        }
+      }
+    }
+    .el-menu {
+      .el-submenu {
+        .el-submenu__title {
+          height: 60px;
+          line-height: 60px;
+          padding-left: 16px !important;
+          &:hover {
+            background-color: white !important;
+            & span {
+
+            }
+          }
+          span {
+            margin-left: 10px;
+            display: inline-block;
+            //vertical-align: middle;
+          }
+          i {
+            vertical-align: middle;
+          }
+
+        }
+        .el-menu {
+          background-color: #f0f4f8 ;
+          .el-menu-item {
+            padding-left: 20px !important;
+            &:hover {
+              background-color: #f0f4f8 ;
+              color: @blueColorBase;
+              & .point {
+                visibility: visible;
+              }
+            }
+            .point {
+              margin-right: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// 覆写scrollBar的滚动样式
+
+
+/*=================================================================================*/
+/*=================================================================================*/
+
+// 各个页面覆盖element-ui的样式
+
+
+
+
